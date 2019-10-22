@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import { View, Text,FlatList, StatusBar,TouchableOpacity} from 'react-native';
+import { View, Text,Dimensions, StatusBar,TouchableOpacity} from 'react-native';
 import Header from '../../../components/Header'
 import FooterSlide from '../../../components/FooterSlide'
-import { getCatlogList } from '../../../actions/catlog'
+import Pdf from 'react-native-pdf';
 
-
-class Catlog extends Component{
+export default class Catlog extends Component{
   static navigationOptions = {
     header: null,
   }
@@ -15,29 +14,6 @@ class Catlog extends Component{
     super(props);
   }
 
-  componentDidMount() {
-    this.props.getCatlogList();
-  }
-  
-  onRefresh = () => {
-    this.props.getPriceList();
-  }
-
-  keyExtractor = (item, index) => item.CategoryID.toString()
-
-  renderSeparator = () => <View style={{width: '100%',height: 1,marginTop:5,marginBottom:5,backgroundColor: '#CCCCCC'}} />
-
-  renderItem = ({ item }) => (
-    <View style = {{width: '100%',padding:10,justifyContent: 'center',alignItems: 'center',alignSelf: 'center'}}>
-        <TouchableOpacity activeOpacity={1} underlayColor="transparent" 
-         onPress={() => this.props.navigation.navigate('PDFViewer')}>
-        <View style = {{width: '90%',flexDirection: 'column',padding:5}}>
-            <Text style = {{color: '#000000',fontSize:18,fontFamily: 'OpenSans'}}>{item.CategoryName}</Text>
-            <Text numberOfLines={1} style = {{color: '#000000',fontSize:14,fontFamily: 'OpenSans'}}>{item.ImagePath}</Text>
-        </View>
-       </TouchableOpacity> 
-    </View>  
-  )
 
   render (){
     const { navigate } = this.props.navigation;
@@ -50,18 +26,23 @@ class Catlog extends Component{
             />
             <Header
               isVisibleBackArrow = {false}
-              title = {"Catlog List"}/>
+              title = {"Catlog"}/>
             <View style = {{flex: 1}}>
-              <FlatList
-                  data={this.props.catlogList}
-                  keyExtractor={this.keyExtractor}
-                  renderItem={this.renderItem}
-                  ItemSeparatorComponent={this.renderSeparator}
-                  ListEmptyComponent={this.renderEmptyComponent}
-                  refreshing={this.props.refreshing}
-                  onRefresh={this.onRefresh}
-                  contentContainerStyle = {{flexGrow: 1,marginTop:15}}
-                />
+                <Pdf
+                    source={require("../../../assets/alutech_shade.pdf")}
+                    onLoadComplete={(numberOfPages,filePath)=>{
+                        console.log(`number of pages: ${numberOfPages}`);
+                    }}
+                    onPageChanged={(page,numberOfPages)=>{
+                        console.log(`current page: ${page}`);
+                    }}
+                    onError={(error)=>{
+                        console.log(error);
+                    }}
+                    style={{
+                        flex:1,
+                        width:Dimensions.get('window').width,
+                    }}/>
                 <View style = {{width: '100%',height:60,position: 'relative',bottom:0}}>
                 <FooterSlide
                   parentProps = {this.props}/>
@@ -71,15 +52,3 @@ class Catlog extends Component{
     );
   }
 }
-
-const mapStateToProps = state => {
-  return {
-    catlogList: state.catlog.catlogList,
-    refreshing: false
-  }
-}
-
-export default connect(
-  mapStateToProps,
-  { getCatlogList}
-)(Catlog)

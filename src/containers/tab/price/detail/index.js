@@ -17,6 +17,10 @@ export default class ImageDetail extends Component{
   constructor(props) {
     super(props);
   }
+
+  componentDidMount(){
+    console.log(2222,this.props.navigation.state.params.selectedImage.item.image)
+  }
   
   render (){
     return(
@@ -40,7 +44,7 @@ export default class ImageDetail extends Component{
                         imageHeight={screenHeight-150}>
                       <Image style={{width:screenWidth, height:screenHeight-150,alignSelf: 'center',}}
                         resizeMode = {'stretch'}
-                        source={require('../../../../assets/images/channai_price_1.jpg')}/>
+                        source={this.props.navigation.state.params.selectedImage.item.image}/>
                   </ImageZoom>
                 </View>
                 <View style = {{width: '100%',height:60,position: 'relative',bottom:0,}}>

@@ -17,7 +17,7 @@ class SplashScreen extends Component {
   _loadInitialState = async () => {
     const { navigation } = this.props
     setTimeout(() => {
-      navigation.navigate('Login')
+      navigation.replace('Dashboard')
     }, 2000)
   }
 

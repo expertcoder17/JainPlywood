@@ -10,7 +10,6 @@ import LoginScreen from '../containers/auth/index'
 import AboutScreen from '../containers/tab/about/index'
 import PriceScreen from '../containers/tab/price/index'
 import CatlogScreen from '../containers/tab/catlog/index'
-import PDFViewerScreen from '../containers/tab/catlog/pdfviewer/index'
 import ContactUsScreen from '../containers/tab/contactus/index'
 import URLScreen from '../containers/url/index'
 import ImageDetailScreen from '../containers/tab/price/detail/index'
@@ -143,7 +142,6 @@ const MainApp = createAppContainer(
     Splash: SplashScreen,
     Login:LoginScreen,
     Dashboard: AppScreens,
-    PDFViewer:PDFViewerScreen,
     ImageDetail:ImageDetailScreen,
     URLOpen:URLScreen
   },
