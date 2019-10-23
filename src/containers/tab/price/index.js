@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
 import { View, Image,StatusBar,Dimensions,StyleSheet, TouchableOpacity} from 'react-native';
 import Header from '../../../components/Header'
 import FooterSlide from '../../../components/FooterSlide'
 import AppIntroSlider from '../../../components/view_pager/AppIntroSlider'
+import LoginScreen from '../../auth/index'
 
 const { width: screenWidth } = Dimensions.get('window')
 const { height: screenHeight } = Dimensions.get('window')
 
-export default  class Price extends Component{
+class Price extends Component{
   static navigationOptions = {
     header: null,
   }
@@ -130,10 +132,9 @@ export default  class Price extends Component{
   keyExtractor = (item, index) => index.toString()
   
   _renderItem = (item) => {
-    console.log(4949,item.item.id,item.item.image)
     return (
       <TouchableOpacity activeOpacity={1} underlayColor="transparent"
-        onPress = {() => this.props.navigation.navigate('ImageDetail',{selectedImage : item})}>
+        onPress = {() => this.props.navigation.navigate('ImageDetail',{selectedImage : item,request: 0})}>
         <Image
           style={{width: screenWidth-4,height:screenHeight-235,borderWidth:0,borderColor: '#FFFFFF',alignSelf: 'center'}}
           source={item.item.image}
@@ -146,35 +147,57 @@ export default  class Price extends Component{
   render (){
     const { navigate } = this.props.navigation;
     return(
-      <View
-          style= {{width: "100%",height: "100%",backgroundColor: '#FFFFFF'}}>
-            <StatusBar
-            backgroundColor={'transparent'}
-            translucent
-            />
-            <Header
-              isVisibleBackArrow = {false}
-              title = {"Price List"}/>
-              <View style = {{width: '100%',height: screenHeight-180,}}>
-              <View style = {{width: '100%',height: screenHeight-235,alignSelf: 'center',}}>
-                <AppIntroSlider 
-                  renderItem={this._renderItem} 
-                  keyExtractor={this.keyExtractor}
-                  slides={this.state.lstPriceTamilnadu}
-                  showSkipButton = {false}
-                  showPrevButton = {false}
-                  showNextButton = {false}
-                  showDoneButton = {false}/>
+      <View style= {{width: "100%",height: "100%",backgroundColor: '#FFFFFF'}}>
+          {this.props.isLogin === 'true' ?
+            <View
+            style= {{width: "100%",height: "100%",backgroundColor: '#FFFFFF'}}>
+              <StatusBar
+              backgroundColor={'transparent'}
+              translucent
+              />
+              <Header
+                isVisibleBackArrow = {false}
+                title = {"Price List"}/>
+                <View style = {{width: '100%',height: screenHeight-180,}}>
+                <View style = {{width: '100%',height: screenHeight-235,alignSelf: 'center',}}>
+                  <AppIntroSlider 
+                    renderItem={this._renderItem} 
+                    keyExtractor={this.keyExtractor}
+                    slides={this.props.login_city === 'tamilnadu' ? this.state.lstPriceTamilnadu : this.state.lstPriceChannai}
+                    showSkipButton = {false}
+                    showPrevButton = {false}
+                    showNextButton = {false}
+                    showDoneButton = {false}/>
+                  </View>
+                <View style = {{width: '100%',height:60,position: 'relative',bottom:0}}>
+                  <FooterSlide
+                    parentProps = {this.props}/>
                 </View>
-              <View style = {{width: '100%',height:60,position: 'relative',bottom:0}}>
-                <FooterSlide
-                  parentProps = {this.props}/>
               </View>
-            </View>
+        </View>
+        :
+        <LoginScreen
+          propsParent = {this.props}/>
+          }
       </View>
+     
+      
     );
   }
 }
+
+const mapStateToProps = state => {
+  return {
+    number_random: Date.now(),
+    isLogin: state.auth && state.auth.authentication ? ''+state.auth.authentication : 'false',
+    login_city: state.auth && state.auth.login_city ? state.auth.login_city : '',
+  }
+}
+
+export default connect(
+  mapStateToProps,{
+  }
+)(Price)
 
 const styles = StyleSheet.create({
   item: {

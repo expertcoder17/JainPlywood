@@ -6,7 +6,7 @@ import FooterSlide from '../../../../components/FooterSlide'
 const { width: screenWidth } = Dimensions.get('window')
 const { height: screenHeight } = Dimensions.get('window')
 import ImageZoom from 'react-native-image-pan-zoom';
-
+import LoginScreen from '../../../auth/index'
  
 
 export default class ImageDetail extends Component{
@@ -16,10 +16,6 @@ export default class ImageDetail extends Component{
 
   constructor(props) {
     super(props);
-  }
-
-  componentDidMount(){
-    console.log(2222,this.props.navigation.state.params.selectedImage.item.image)
   }
   
   render (){
@@ -44,7 +40,7 @@ export default class ImageDetail extends Component{
                         imageHeight={screenHeight-150}>
                       <Image style={{width:screenWidth, height:screenHeight-150,alignSelf: 'center',}}
                         resizeMode = {'stretch'}
-                        source={this.props.navigation.state.params.selectedImage.item.image}/>
+                        source={this.props.navigation.state.params.request === 0 ? this.props.navigation.state.params.selectedImage.item.image : this.props.navigation.state.params.selectedImage.image}/>
                   </ImageZoom>
                 </View>
                 <View style = {{width: '100%',height:60,position: 'relative',bottom:0,}}>

@@ -1,50 +1,31 @@
 import AsyncStorage from '@react-native-community/async-storage'
-import { STORE_USER_INFO,IS_LOGIN,TOTAL_CART_PRODUCT } from '../constants/AppConstants'
+import { IS_LOGIN , LOGIN_CITY} from '../constants/AppConstants'
 
   export const checkUserAuthentication = () => async dispatch => {
     try {
       let isLOGINValue = await AsyncStorage.getItem(IS_LOGIN)
+      let LoginCity = await AsyncStorage.getItem(LOGIN_CITY)
       if(isLOGINValue === null){
         await AsyncStorage.setItem(IS_LOGIN,"false")
-        isLOGINValue = false
+        isLOGINValue = 'false'
       }
       if(isLOGINValue === "true"){
-        let user = await AsyncStorage.getItem(STORE_USER_INFO)
-        dispatch({
-          type: 'social_login_success',
-          payload: JSON.parse(user)
-        })
+
         dispatch({
           type: 'check_user_authentication',
-          payload: true
+          payload: 'true',
+          city: LoginCity
         })
       }else{
         dispatch({
-          type: 'social_login_success',
-          payload: {}
-        })
-        dispatch({
           type: 'check_user_authentication',
-          payload: false
+          payload: 'false',
+          city: ''
         })
       }
       
     } catch ({ response }) {
     }
   }
-
-  export const logOut = () => async dispatch => {
-    try {
-      await AsyncStorage.setItem(IS_LOGIN,"false")
-      await AsyncStorage.setItem(TOTAL_CART_PRODUCT, "0")
-      await AsyncStorage.setItem(STORE_USER_INFO, "undefined")
-      dispatch({
-        type: 'check_user_authentication',
-        payload: false
-      })
-    } catch ({ response }) {
-    }
-  }
-
  
   

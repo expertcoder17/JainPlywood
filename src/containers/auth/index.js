@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
+import AsyncStorage from '@react-native-community/async-storage'
 import { View, Text,StatusBar,TouchableOpacity,TextInput} from 'react-native';
 import Header from '../../components/Header'
 import LinearGradient from 'react-native-linear-gradient';
+import { LOGIN_CITY,TAMILNADU,CHANNAI,IS_LOGIN} from '../../constants/AppConstants'
+import {checkUserAuthentication} from '../../actions/auth'
 
-export default class Login extends Component{
+class Login extends Component{
   static navigationOptions = {
     header: null,
   }
@@ -12,34 +16,42 @@ export default class Login extends Component{
     super(props);
     this.state= {
       username: '',
-      password: 'TAMILNADU',
+      password: '',
     }
   }
 
-  onClickSignIn = () => {
+  componentDidUpdate(){
+    console.log(2323,this.props.isLogin)
+    if(this.props.isLogin === 'true'){
+      this.props.navigation.goBack(null);
+    }
+  }
+
+  onClickSignIn = async() => {
     if(this.state.username.trim().length === 0){
       alert("Please enter username.")
     }else if(this.state.password.trim().length === 0){
       alert("Please enter password.")
     }else{
-      console.log(2525,this.state.password)
-      console.log(2626,)
-      if(this.state.password.toUpperCase() === "TAMILNADU" || this.state.password.toUpperCase() === "CHENNAI"){
-        const { navigation } = this.props
-        this.props.navigation.navigate("Dashboard",{"location": this.state.password.toUpperCase() })
+      if(this.state.password.toUpperCase() === "TAMIL@044" || this.state.password.toUpperCase() === "CHENNAI@044"){
+        await AsyncStorage.setItem(IS_LOGIN,'true')
+        if(this.state.password.toUpperCase() === 'TAMIL@044'){
+          await AsyncStorage.setItem(LOGIN_CITY,TAMILNADU)
+        }else{
+          await AsyncStorage.setItem(LOGIN_CITY,CHANNAI)
+        }
+        this.props.checkUserAuthentication();
       }else{
+        await AsyncStorage.setItem(IS_LOGIN,'false')
         alert("Password is incorrect.")
       }
-      
     }
   }
 
   
 
   render (){
-    const { navigate } = this.props.navigation;
     return(
-      
       <View style= {{width: "100%",height: "100%",backgroundColor: '#FFFFFF',}}>
             <StatusBar
             backgroundColor={'transparent'}
@@ -91,3 +103,18 @@ export default class Login extends Component{
     );
   }
 }
+
+const mapStateToProps = state => {
+  console.log(9696,state)
+  return {
+    number_random: Date.now(),
+    isLogin: state.auth && state.auth.authentication ? state.auth.authentication : false,
+    login_city: state.auth && state.auth.login_city ? state.auth.login_city : '',
+  }
+}
+
+export default connect(
+  mapStateToProps,{
+    checkUserAuthentication
+  }
+)(Login)

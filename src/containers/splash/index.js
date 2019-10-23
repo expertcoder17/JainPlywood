@@ -30,7 +30,10 @@ class SplashScreen extends Component {
             />
             <LinearGradient
               colors={["#E31A22", "#F54920", "#F54920"]}
-              style={{width: "100%",height: "100%"}}>
+              style={{width: "100%",height: "100%",alignItems: 'center',justifyContent: 'center'}}>
+
+               <Image style = {{width:250,height:250,alignSelf: 'center'}}
+                source = {require("../../assets/images/logo.jpg")}/> 
                 
             </LinearGradient>
            
