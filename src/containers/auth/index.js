@@ -21,7 +21,6 @@ class Login extends Component{
   }
 
   componentDidUpdate(){
-    console.log(2323,this.props.isLogin)
     if(this.props.isLogin === 'true'){
       this.props.navigation.goBack(null);
     }

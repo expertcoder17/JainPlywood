@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* JainPlywoodTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* JainPlywoodTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
@@ -16,11 +17,11 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* JainPlywoodTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* JainPlywoodTests.m */; };
 		301635BC47019EB0C80944A5 /* libPods-JainPlywood.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7CD6DE611ACF6FC983B800 /* libPods-JainPlywood.a */; };
+		4728EB54A3EC4BEF8048C158 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D24C6DB97D524A1CB94745DD /* OpenSans-Semibold.ttf */; };
 		518015757D4A693F00D83428 /* libPods-JainPlywood-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C32DC2270881FEDACDEC1D /* libPods-JainPlywood-tvOS.a */; };
 		5F40CC4D948DEA0B1DE31595 /* libPods-JainPlywoodTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80E8E8C6347E522B3DDD42EE /* libPods-JainPlywoodTests.a */; };
-		B936B3279376D944CD9F9588 /* libPods-JainPlywood-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FBCE1EC65876D5C588CB5B9 /* libPods-JainPlywood-tvOSTests.a */; };
 		7F5AA08D75D143F3B543ED51 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A34C75B8F63F42DC952B40B1 /* OpenSans-Regular.ttf */; };
-		4728EB54A3EC4BEF8048C158 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D24C6DB97D524A1CB94745DD /* OpenSans-Semibold.ttf */; };
+		B936B3279376D944CD9F9588 /* libPods-JainPlywood-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FBCE1EC65876D5C588CB5B9 /* libPods-JainPlywood-tvOSTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,11 +66,11 @@
 		7FBCE1EC65876D5C588CB5B9 /* libPods-JainPlywood-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JainPlywood-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80E8E8C6347E522B3DDD42EE /* libPods-JainPlywoodTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JainPlywoodTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81DC90556482E4CDC86817DB /* Pods-JainPlywood-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JainPlywood-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-JainPlywood-tvOSTests/Pods-JainPlywood-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		A34C75B8F63F42DC952B40B1 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-Regular.ttf"; path = "../assets/fonts/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		CD3CFD47ACBC200A3E3480DB /* Pods-JainPlywood-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JainPlywood-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-JainPlywood-tvOSTests/Pods-JainPlywood-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D24C6DB97D524A1CB94745DD /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-Semibold.ttf"; path = "../assets/fonts/OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		A34C75B8F63F42DC952B40B1 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; name = "OpenSans-Regular.ttf"; path = "../assets/fonts/OpenSans-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		D24C6DB97D524A1CB94745DD /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; name = "OpenSans-Semibold.ttf"; path = "../assets/fonts/OpenSans-Semibold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +152,6 @@
 				6E38C6B470C5CD50DE6AECE1 /* Pods-JainPlywoodTests.debug.xcconfig */,
 				573231E3371390DB022D5F9D /* Pods-JainPlywoodTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -166,6 +166,15 @@
 				80E8E8C6347E522B3DDD42EE /* libPods-JainPlywoodTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6384390B6C814821A592CF54 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A34C75B8F63F42DC952B40B1 /* OpenSans-Regular.ttf */,
+				D24C6DB97D524A1CB94745DD /* OpenSans-Semibold.ttf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -201,16 +210,6 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
-		};
-		6384390B6C814821A592CF54 /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				A34C75B8F63F42DC952B40B1 /* OpenSans-Regular.ttf */,
-				D24C6DB97D524A1CB94745DD /* OpenSans-Semibold.ttf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 

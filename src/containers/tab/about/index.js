@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
 import { View, Text, StatusBar} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import Header from '../../../components/Header'
 import FooterSlide from '../../../components/FooterSlide'
-export default class Home extends Component{
+import {checkUserAuthentication} from '../../../actions/auth'
+class Home extends Component{
   static navigationOptions = {
     header: null,
   }
@@ -12,7 +14,9 @@ export default class Home extends Component{
     super(props);
   }
 
-  
+  componentDidMount(){
+    this.props.checkUserAuthentication();
+  }
 
   render (){
     const { navigate } = this.props.navigation;
@@ -40,3 +44,17 @@ export default class Home extends Component{
     );
   }
 }
+
+const mapStateToProps = state => {
+  return {
+    number_random: Date.now(),
+    isLogin: state.auth && state.auth.authentication ? state.auth.authentication : false,
+    login_city: state.auth && state.auth.login_city ? state.auth.login_city : '',
+  }
+}
+
+export default connect(
+  mapStateToProps,{
+    checkUserAuthentication
+  }
+)(Home)

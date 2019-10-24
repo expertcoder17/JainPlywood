@@ -41,11 +41,11 @@ class FooterSlide extends Component {
         },
         {
           id: 5,
-          image: require("../assets/images/banner_ads/benner_4.jpg"),
+          image: require("../assets/images/banner_ads/benner_4.png"),
           request: 0,
           name: 'Timex_Exterior_ Comapact_laminates_(HPL).pdf',
-          location: "../assets/pdfs/6_Timex_Exterior_ Comapact_laminates_(HPL).pdf",
-          path: require("../assets/pdfs/6_Timex_Exterior_ Comapact_laminates_(HPL).pdf"),
+          location: "../assets/pdfs/6_Timex_Exterior_ Comapact_laminates.pdf",
+          path: require("../assets/pdfs/6_Timex_Exterior_ Comapact_laminates.pdf"),
         },
         {
           id: 6,
@@ -87,7 +87,7 @@ class FooterSlide extends Component {
           id: 11,
           image: require("../assets/images/banner_ads/benner_9.jpg"),
           request: 1,
-          value: 'https://www.youtube.com/watchv=iU6DmJ4CgCI&t=3s',
+          value: 'https://www.youtube.com/watch?v=iU6DmJ4CgCI&t=3s',
         },
         {
           id: 12,
@@ -141,7 +141,7 @@ class FooterSlide extends Component {
           id: 19,
           image: require("../assets/images/banner_ads/benner_15.jpg"),
           request: 1,
-          value: 'https://www.youtube.com/channelUCl3ckO1adsIiPFHsb8Uizvg',
+          value: 'https://www.youtube.com/channel/UCl3ckO1adsIiPFHsb8Uizvg',
         },
         {
           id: 20,
@@ -191,9 +191,9 @@ class FooterSlide extends Component {
         <TouchableOpacity key = {index} activeOpacity={1} underlayColor="transparent"
           onPress = {() => this.onClickBannerAds(image, index)}>
           <View key={index}>
-              <Image style={{ width: BannerWidth, height: BannerHeight }} 
+              <Image style={{ width: BannerWidth, height: BannerHeight,backgroundColor:'#FFFFFF' }} 
                 source={image.image}
-                resizeMode = {'stretch'} />
+                resizeMode = {'contain'} />
           </View>
         </TouchableOpacity>
     );

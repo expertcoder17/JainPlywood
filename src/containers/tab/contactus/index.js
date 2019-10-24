@@ -56,7 +56,7 @@ export default class Home extends Component{
                   <Text style = {{color: '#000000',fontSize: 18,textAlign: 'left',marginTop:15,fontFamily: 'OpenSans'}}>{"Centrex - 3280"}</Text>
                   <Text style = {{color: '#000000',fontSize: 18,textAlign: 'left',marginTop:15,fontFamily: 'OpenSans'}}>{"Email : 600005jp@gmail.com"}</Text>
                   <Text style = {{color: '#000000',fontSize: 20,textAlign: 'left',marginTop:25,fontFamily: 'OpenSans',textDecorationLine: 'underline',fontWeight: 'bold'}}>{"Administration :"}</Text>
-                  <Text style = {{color: '#000000',fontSize: 18,textAlign: 'left',marginTop:15,fontFamily: 'OpenSans'}}>{"Fathima - 99622 43388"}</Text>
+                  <Text style = {{color: '#000000',fontSize: 18,textAlign: 'left',marginTop:15,fontFamily: 'OpenSans'}}>{"FATHIMA - 63 69 35 85 98"}</Text>
                   <Text style = {{color: '#000000',fontSize: 18,textAlign: 'left',marginTop:15,fontFamily: 'OpenSans'}}>{"Srinivasan - 824 823 23 63"}</Text>
                   <Text style = {{color: '#000000',fontSize: 20,textAlign: 'left',marginTop:25,fontFamily: 'OpenSans',textDecorationLine: 'underline',fontWeight: 'bold'}}>{"Manager Sales & Dispatch : "}</Text>
                   <Text style = {{color: '#000000',fontSize: 18,textAlign: 'left',marginTop:15,fontFamily: 'OpenSans'}}>{"Gopi - 866 755 73 24"}</Text>

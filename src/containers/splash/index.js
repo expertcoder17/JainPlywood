@@ -32,8 +32,8 @@ class SplashScreen extends Component {
               colors={["#E31A22", "#F54920", "#F54920"]}
               style={{width: "100%",height: "100%",alignItems: 'center',justifyContent: 'center'}}>
 
-               <Image style = {{width:'80%',height:'80%',alignSelf: 'center'}}
-                source = {require("../../assets/images/splash_logo.jpg")}
+               <Image style = {{width:'60%',height:'60%',alignSelf: 'center'}}
+                source = {require("../../assets/images/splash_logo.png")}
                 resizeMode = {'center'}/> 
                 
             </LinearGradient>

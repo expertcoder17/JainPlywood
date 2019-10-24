@@ -46,9 +46,9 @@ export default class Catlog extends Component{
         },
         {
           id: 6,
-          name: 'Timex_Exterior_ Comapact_laminates_(HPL).pdf',
-          location: "../../../assets/pdfs/6_Timex_Exterior_ Comapact_laminates_(HPL).pdf",
-          path: require("../../../assets/pdfs/6_Timex_Exterior_ Comapact_laminates_(HPL).pdf"),
+          name: 'Timex_Exterior_ Comapact_laminates.pdf',
+          location: "../../../assets/pdfs/6_Timex_Exterior_ Comapact_laminates.pdf",
+          path: require("../../../assets/pdfs/6_Timex_Exterior_ Comapact_laminates.pdf"),
         },
         {
           id: 7,
