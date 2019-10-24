@@ -136,7 +136,7 @@ class Price extends Component{
       <TouchableOpacity activeOpacity={1} underlayColor="transparent"
         onPress = {() => this.props.navigation.navigate('ImageDetail',{selectedImage : item,request: 0})}>
         <Image
-          style={{width: screenWidth-4,height:screenHeight-235,borderWidth:0,borderColor: '#FFFFFF',alignSelf: 'center'}}
+          style={{width: screenWidth-4,height:Platform.OS === 'android' ? screenHeight-165 : screenHeight-235,borderWidth:0,borderColor: '#FFFFFF',alignSelf: 'center'}}
           source={item.item.image}
           resizeMode ={'stretch'}
         />
@@ -159,7 +159,7 @@ class Price extends Component{
                 isVisibleBackArrow = {false}
                 title = {"Price List"}/>
                 <View style = {{width: '100%',height: screenHeight-180,}}>
-                <View style = {{width: '100%',height: screenHeight-235,alignSelf: 'center',}}>
+                <View style = {{width: '100%',height: Platform.OS === 'android' ? screenHeight-165 : screenHeight-235 ,alignSelf: 'center',}}>
                   <AppIntroSlider 
                     renderItem={this._renderItem} 
                     keyExtractor={this.keyExtractor}
@@ -169,8 +169,8 @@ class Price extends Component{
                     showNextButton = {false}
                     showDoneButton = {false}/>
                   </View>
-                <View style = {{width: '100%',height:60,position: 'relative',bottom:0}}>
-                  <FooterSlide
+                <View style = {{width: '100%',height:60,position: 'relative',bottom:0,backgroundColor: 'green'}}>
+                <FooterSlide
                     parentProps = {this.props}/>
                 </View>
               </View>
