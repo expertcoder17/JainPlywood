@@ -27,9 +27,11 @@ class FooterSlide extends Component {
         },
         {
           id: 3,
-          image: require("../assets/images/banner_ads/benner_3.jpg"),
           request: 0,
-          value: 'catlog',
+          image: require("../assets/images/banner_ads/benner_3.jpg"),
+          name: 'Legend_Vista_Folder_Web.pdf',
+          location: "../assets/pdfs/2_Legend_Vista_Folder_Web.pdf",
+          path: require("../assets/pdfs/2_Legend_Vista_Folder_Web.pdf"),
         },
         {
           id: 4,
@@ -41,7 +43,9 @@ class FooterSlide extends Component {
           id: 5,
           image: require("../assets/images/banner_ads/benner_4.jpg"),
           request: 0,
-          value: 'catlog',
+          name: 'Timex_Exterior_ Comapact_laminates_(HPL).pdf',
+          location: "../assets/pdfs/6_Timex_Exterior_ Comapact_laminates_(HPL).pdf",
+          path: require("../assets/pdfs/6_Timex_Exterior_ Comapact_laminates_(HPL).pdf"),
         },
         {
           id: 6,
@@ -53,7 +57,9 @@ class FooterSlide extends Component {
           id: 7,
           image: require("../assets/images/banner_ads/benner_6.jpg"),
           request: 0,
-          value: 'catlog',
+          name: 'E3_Interio.pdf',
+          location: "../assets/pdfs/1_E3_Interio.pdf",
+          path: require("../assets/pdfs/1_E3_Interio.pdf"),
         },
         {
           id: 8,
@@ -168,6 +174,12 @@ class FooterSlide extends Component {
           image: require("../assets/images/banner_ads/benner_20.jpg"),
           request: 1,
           value: 'https://www.youtube.com/channel/UCkuXTowXwK0tn-vz2fnhhaA/videos',
+        },
+        {
+          id: 25,
+          image: require("../assets/images/banner_ads/benner_21.jpg"),
+          request: 1,
+          value: 'https://www.minwool.com/ceiling-tiles.htm',
         }
       ]
      
@@ -191,18 +203,26 @@ class FooterSlide extends Component {
     if(image.request === 1){
       Linking.openURL(image.value);
     }else if(image.request === 2){
-      var item = {
-        id: image.id,
-        image: require('../assets/images/tamilnadu/price_9.jpg'),
+      var item = {}
+      if(this.props.login_city === 'channai'){
+        item = {
+          id: image.id,
+          image: image.image_channai,
+        }
+      }else{
+        item = {
+          id: image.id,
+          image: image.image_tamilnadu,
+        }
       }
-      console.log(198198,this.props.isLogin)
+      
       if(this.props.isLogin === 'true'){
         this.props.parentProps.navigation.navigate('ImageDetail',{selectedImage :item,request: 1})
       }else{
         this.props.parentProps.navigation.navigate("Login")
       }
     }else{
-      this.props.parentProps.navigation.navigate("Catlog")
+      this.props.parentProps.navigation.navigate('PDFView',{selectedPDF: image})
     }
   }
 

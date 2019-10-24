@@ -23,7 +23,7 @@ class SplashScreen extends Component {
 
   render() {
     return (
-      <View style={{ flex: 1,backgroundColor: 'green'}}>
+      <View style={{ flex: 1,}}>
             <StatusBar
               backgroundColor={'transparent'}
               translucent
@@ -32,8 +32,9 @@ class SplashScreen extends Component {
               colors={["#E31A22", "#F54920", "#F54920"]}
               style={{width: "100%",height: "100%",alignItems: 'center',justifyContent: 'center'}}>
 
-               <Image style = {{width:250,height:250,alignSelf: 'center'}}
-                source = {require("../../assets/images/logo.jpg")}/> 
+               <Image style = {{width:'80%',height:'80%',alignSelf: 'center'}}
+                source = {require("../../assets/images/splash_logo.jpg")}
+                resizeMode = {'center'}/> 
                 
             </LinearGradient>
            
