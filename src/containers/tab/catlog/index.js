@@ -92,7 +92,6 @@ export default class Catlog extends Component{
       onPress = {() => this.props.navigation.navigate('PDFView',{selectedPDF: item})}>
       <View style = {{flexDirection: 'column',padding:20}}>
         <Text style = {{color: '#000',fontSize: 20}}>{item.name}</Text>
-        <Text numberOfLines = {1} style = {{color: '#000',fontSize: 16}}>{item.location}</Text>
       </View>
     </TouchableOpacity>
   )
