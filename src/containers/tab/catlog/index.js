@@ -17,43 +17,43 @@ export default class Catlog extends Component{
           id: 1,
           name: 'E3_Interio.pdf',
           path_android: {uri:'bundle-assets://pdf/1_E3_Interio.pdf'},
-          // path: require("../../../assets/pdfs/1_E3_Interio.pdf"),
+          path_ios: require("../../../assets/pdf/1_E3_Interio.pdf"),
         },
         {
           id: 2,
           name: 'Legend_Vista_Folder_Web.pdf',
           path_android: {uri:'bundle-assets://pdf/2_Legend_Vista_Folder_Web.pdf'},
-          // path_ios: require("./pdf/2_Legend_Vista_Folder_Web.pdf"),
+          path_ios: require("../../../assets/pdf/2_Legend_Vista_Folder_Web.pdf"),
         },
         {
           id: 3,
           name: 'Meraki_Gold_Folder.pdf',
           path_android: {uri:'bundle-assets://pdf/3_Meraki_Gold_Folder.pdf'},
-          // path_ios: require("./pdf/3_Meraki_Gold_Folder.pdf"),
+          path_ios: require("../../../assets/pdf/3_Meraki_Gold_Folder.pdf"),
         },
         {
           id: 4,
           name: 'Meraki_Portfolio_2018_2019.pdf',
           path_android: {uri:'bundle-assets://pdf/4_Meraki_Portfolio_2018_2019.pdf'},
-          // path_ios: require("./pdf/4_Meraki_Portfolio_2018_2019.pdf"),
+          path_ios: require("../../../assets/pdf/4_Meraki_Portfolio_2018_2019.pdf"),
         },
         {
           id: 5,
           name: 'MERAKI.pdf',
           path_android: {uri:'bundle-assets://pdf/5_MERAKI.pdf'},
-          // path_ios: require("./pdf/5_MERAKI.pdf"),
+          path_ios: require("../../../assets/pdf/5_MERAKI.pdf"),
         },
         {
           id: 6,
           name: 'Timex_Exterior_ Comapact_laminates.pdf',
-          path_android: {uri:'bundle-assets://pdf/6_Timex_Exterior_ Comapact_laminates.pdf'},
-          // path_ios: require("./pdf/6_Timex_Exterior_ Comapact_laminates.pdf"),
+          path_android: {uri:'bundle-assets://pdf/6_Timex_Exterior_Comapact_laminates.pdf'},
+          path_ios: require("../../../assets/pdf/6_Timex_Exterior_Comapact_laminates.pdf"),
         },
         {
           id: 7,
           name: 'Alutech_shade.pdf',
           path_android: {uri:'bundle-assets://pdf/7_Alutech_shade.pdf'},
-          // path_ios: require("./pdf/7_Alutech_shade.pdf"),
+          path_ios: require("../../../assets/pdf/7_Alutech_shade.pdf"),
         }
       ]
     }

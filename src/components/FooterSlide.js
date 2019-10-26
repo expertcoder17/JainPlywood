@@ -31,7 +31,7 @@ class FooterSlide extends Component {
           image: require("../assets/images/banner_ads/benner_3.jpg"),
           name: 'Legend_Vista_Folder_Web.pdf',
           path_android: {uri:'bundle-assets://pdf/2_Legend_Vista_Folder_Web.pdf'},
-          // path: require("../assets/pdfs/2_Legend_Vista_Folder_Web.pdf"),
+          path_ios: require("../../../assets/pdf/2_Legend_Vista_Folder_Web.pdf"),
         },
         {
           id: 4,
@@ -44,8 +44,8 @@ class FooterSlide extends Component {
           image: require("../assets/images/banner_ads/benner_4.png"),
           request: 0,
           name: 'Timex_Exterior_ Comapact_laminates_(HPL).pdf',
-          path_android: {uri:'bundle-assets://pdf/6_Timex_Exterior_ Comapact_laminates.pdf'},
-          // path: require("../assets/pdfs/6_Timex_Exterior_ Comapact_laminates.pdf"),
+          path_android: {uri:'bundle-assets://pdf/6_Timex_Exterior_Comapact_laminates.pdf'},
+          path_ios: require("../../../assets/pdf/6_Timex_Exterior_Comapact_laminates.pdf"),
         },
         {
           id: 6,
@@ -59,7 +59,7 @@ class FooterSlide extends Component {
           request: 0,
           name: 'E3_Interio.pdf',
           path_android: {uri:'bundle-assets://pdf/1_E3_Interio.pdf'},
-          // path: require("../assets/pdfs/1_E3_Interio.pdf"),
+          path_ios: require("../../../assets/pdf/1_E3_Interio.pdf"),
         },
         {
           id: 8,

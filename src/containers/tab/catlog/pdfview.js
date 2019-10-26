@@ -34,7 +34,7 @@ export default class PDFCatlog extends Component{
               {/* this.props.navigation.state.params.selectedPDF.path */}
             <View style = {{flex: 1}}>
                 <Pdf
-                    source={Platform.OS === 'ios' ? '' : this.props.navigation.state.params.selectedPDF.path_android }
+                    source={Platform.OS === 'ios' ? this.props.navigation.state.params.selectedPDF.path_ios : this.props.navigation.state.params.selectedPDF.path_android }
                     onLoadComplete={(numberOfPages,filePath)=>{
                     }}
                     onPageChanged={(page,numberOfPages)=>{
