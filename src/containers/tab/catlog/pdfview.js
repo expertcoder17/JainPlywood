@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import { View, Text,Dimensions, StatusBar,TouchableOpacity} from 'react-native';
+import { View, Text,Dimensions, StatusBar,TouchableOpacity, Platform} from 'react-native';
 import Header from '../../../components/Header'
 import FooterSlide from '../../../components/FooterSlide'
 import Pdf from 'react-native-pdf';
@@ -14,9 +14,7 @@ export default class PDFCatlog extends Component{
     super(props);
   }
 
-  componentDidMount(){
-    console.log(181818,this.props)
-  }
+  
 
   render (){
     const { navigate } = this.props.navigation;
@@ -33,17 +31,16 @@ export default class PDFCatlog extends Component{
                 this.props.navigation.goBack(null);
               }}
               title = {this.props.navigation.state.params.selectedPDF.name}/>
+              {/* this.props.navigation.state.params.selectedPDF.path */}
             <View style = {{flex: 1}}>
                 <Pdf
-                    source={this.props.navigation.state.params.selectedPDF.path}
+                    source={Platform.OS === 'ios' ? '' : {uri:'bundle-assets://pdf/1_E3_Interio.pdf'}}
                     onLoadComplete={(numberOfPages,filePath)=>{
-                        console.log(`number of pages: ${numberOfPages}`);
                     }}
                     onPageChanged={(page,numberOfPages)=>{
-                        console.log(`current page: ${page}`);
                     }}
                     onError={(error)=>{
-                        console.log(error);
+                        console.log(46,error);
                     }}
                     style={{
                         flex:1,

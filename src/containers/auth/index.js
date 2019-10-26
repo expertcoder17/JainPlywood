@@ -104,7 +104,6 @@ class Login extends Component{
 }
 
 const mapStateToProps = state => {
-  console.log(9696,state)
   return {
     number_random: Date.now(),
     isLogin: state.auth && state.auth.authentication ? state.auth.authentication : false,
