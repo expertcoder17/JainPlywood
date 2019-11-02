@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import { View, Text, StatusBar} from 'react-native';
+import { View, Text, StatusBar,Alert,Linking} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import Header from '../../../components/Header'
 import FooterSlide from '../../../components/FooterSlide'
 import {checkUserAuthentication} from '../../../actions/auth'
+import DeviceInfo from 'react-native-device-info';
+import { getAppstoreAppVersion } from "react-native-appstore-version-checker";
+
+
 class Home extends Component{
   static navigationOptions = {
     header: null,
@@ -14,10 +18,57 @@ class Home extends Component{
     super(props);
   }
 
+
+  //On Android u can do
+
   componentDidMount(){
     this.props.checkUserAuthentication();
+    console.log("Build getBundleId:: ", DeviceInfo.getBundleId());
+    console.log("Build Number:: ", DeviceInfo.getBuildNumber());
+    console.log("DeviceInfo.getVersion():: ",  DeviceInfo.getVersion())
+
+    getAppstoreAppVersion("com.JainPlywoods.android") //put any apps packageId here
+    .then(appVersion => {
+      console.log(3232, appVersion);
+      if(DeviceInfo.getVersion() !== appVersion){
+        Alert.alert(
+          'Alert',
+          'Please update your application from Google Play Store',
+          [
+            {text: 'Cancel',onPress: () => console.log('Cancel Pressed'), style: 'cancel',},
+            {text: 'Update', onPress: () => Linking.openURL("market://details?id=com.JainPlywoods.android")},
+          ],
+          {cancelable: false},
+        );
+      }
+    })
+    .catch(err => {
+      console.log("error occurred", err);
+    });
+
+
+    getAppstoreAppVersion("529479190") //put any apps id here
+    .then(appVersion => {
+      console.log(5252, appVersion);
+      if(DeviceInfo.getVersion() !== appVersion){
+        Alert.alert(
+          'Alert',
+          'Please update your application from Apple Store',
+          [
+            {text: 'Cancel',onPress: () => console.log('Cancel Pressed'), style: 'cancel',},
+            {text: 'Update', onPress: () => console.log('OK Pressed')},
+          ],
+          {cancelable: false},
+        );
+      }
+    })
+    .catch(err => {
+      console.log("error occurred", err);
+    });
+    
   }
 
+  
   render (){
     const { navigate } = this.props.navigation;
     return(
@@ -44,7 +95,6 @@ class Home extends Component{
     );
   }
 }
-
 const mapStateToProps = state => {
   return {
     number_random: Date.now(),

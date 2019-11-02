@@ -31,7 +31,7 @@ class FooterSlide extends Component {
           image: require("../assets/images/banner_ads/benner_3.jpg"),
           name: 'Legend_Vista_Folder_Web.pdf',
           path_android: {uri:'bundle-assets://pdf/2_Legend_Vista_Folder_Web.pdf'},
-          path_ios: require("../../../assets/pdf/2_Legend_Vista_Folder_Web.pdf"),
+          path_ios:  require("../assets/pdf/2_Legend_Vista_Folder_Web.pdf"),
         },
         {
           id: 4,
@@ -45,7 +45,7 @@ class FooterSlide extends Component {
           request: 0,
           name: 'Timex_Exterior_ Comapact_laminates_(HPL).pdf',
           path_android: {uri:'bundle-assets://pdf/6_Timex_Exterior_Comapact_laminates.pdf'},
-          path_ios: require("../../../assets/pdf/6_Timex_Exterior_Comapact_laminates.pdf"),
+          path_ios:  require("../assets/pdf/6_Timex_Exterior_Comapact_laminates.pdf"),
         },
         {
           id: 6,
@@ -59,7 +59,7 @@ class FooterSlide extends Component {
           request: 0,
           name: 'E3_Interio.pdf',
           path_android: {uri:'bundle-assets://pdf/1_E3_Interio.pdf'},
-          path_ios: require("../../../assets/pdf/1_E3_Interio.pdf"),
+          path_ios:  require("../assets/pdf/1_E3_Interio.pdf"),
         },
         {
           id: 8,
@@ -72,16 +72,16 @@ class FooterSlide extends Component {
           image: require("../assets/images/banner_ads/benner_7.jpg"),
           request: 2,
           value: '7',
-          image_channai: require('../assets/images/channai/price_7.jpg'),
-          image_tamilnadu: require('../assets/images/tamilnadu/price_7.jpg')
+          image_channai: require('../assets/images/chennai/price_7.jpg'),
+          image_tamilnadu: require('../assets/images/tamil/price_7.jpg')
         },
         {
           id: 10,
           image: require("../assets/images/banner_ads/benner_8.jpg"),
           request: 2,
           value: '2',
-          image_channai: require('../assets/images/channai/price_2.jpg'),
-          image_tamilnadu: require('../assets/images/tamilnadu/price_2.jpg')
+          image_channai: require('../assets/images/chennai/price_2.jpg'),
+          image_tamilnadu: require('../assets/images/tamil/price_2.jpg')
         },
         {
           id: 11,
@@ -100,24 +100,24 @@ class FooterSlide extends Component {
           image: require("../assets/images/banner_ads/benner_10.jpg"),
           request: 2,
           value: '6',
-          image_channai: require('../assets/images/channai/price_6.jpg'),
-          image_tamilnadu: require('../assets/images/tamilnadu/price_6.jpg')
+          image_channai: require('../assets/images/chennai/price_6.jpg'),
+          image_tamilnadu: require('../assets/images/tamil/price_6.jpg')
         },
         {
           id: 14,
           image: require("../assets/images/banner_ads/benner_11.jpg"),
           request: 2,
           value: '5',
-          image_channai: require('../assets/images/channai/price_5.jpg'),
-          image_tamilnadu: require('../assets/images/tamilnadu/price_5.jpg')
+          image_channai: require('../assets/images/chennai/price_5.jpg'),
+          image_tamilnadu: require('../assets/images/tamil/price_5.jpg')
         },
         {
           id: 15,
           image: require("../assets/images/banner_ads/benner_12.jpg"),
           request: 2,
           value: '9',
-          image_channai: require('../assets/images/channai/price_9.jpg'),
-          image_tamilnadu: require('../assets/images/tamilnadu/price_9.jpg')
+          image_channai: require('../assets/images/chennai/price_9.jpg'),
+          image_tamilnadu: require('../assets/images/tamil/price_9.jpg')
         },
         {
           id: 16,
@@ -160,8 +160,8 @@ class FooterSlide extends Component {
           image: require("../assets/images/banner_ads/benner_17.jpg"),
           request: 2,
           value: '9',
-          image_channai: require('../assets/images/channai/price_9.jpg'),
-          image_tamilnadu: require('../assets/images/tamilnadu/price_9.jpg')
+          image_channai: require('../assets/images/chennai/price_9.jpg'),
+          image_tamilnadu: require('../assets/images/tamil/price_9.jpg')
         },
         {
           id: 23,

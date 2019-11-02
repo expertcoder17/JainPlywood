@@ -20,109 +20,109 @@ class Price extends Component{
       lstPriceChannai: [
         {
           id: 1,
-          image: require("../../../assets/images/channai/price_1.jpg"),
+          image: require("../../../assets/images/chennai/price_1.jpg"),
         },
         {
           id: 2,
-          image: require("../../../assets/images/channai/price_2.jpg"),
+          image: require("../../../assets/images/chennai/price_2.jpg"),
         },
         {
           id: 3,
-          image: require("../../../assets/images/channai/price_3.jpg"),
+          image: require("../../../assets/images/chennai/price_3.jpg"),
         },
         {
           id: 4,
-          image: require("../../../assets/images/channai/price_4.jpg"),
+          image: require("../../../assets/images/chennai/price_4.jpg"),
         },
         {
           id: 5,
-          image: require("../../../assets/images/channai/price_5.jpg"),
+          image: require("../../../assets/images/chennai/price_5.jpg"),
         },
         {
           id: 6,
-          image: require("../../../assets/images/channai/price_6.jpg"),
+          image: require("../../../assets/images/chennai/price_6.jpg"),
         },
         {
           id: 7,
-          image: require("../../../assets/images/channai/price_7.jpg"),
+          image: require("../../../assets/images/chennai/price_7.jpg"),
         },
         {
           id: 8,
-          image: require("../../../assets/images/channai/price_8.jpg"),
+          image: require("../../../assets/images/chennai/price_8.jpg"),
         },
         {
           id: 9,
-          image: require("../../../assets/images/channai/price_9.jpg"),
+          image: require("../../../assets/images/chennai/price_9.jpg"),
         },
         {
           id: 10,
-          image: require("../../../assets/images/channai/price_10.jpg"),
+          image: require("../../../assets/images/chennai/price_10.jpg"),
         },
         {
           id: 11,
-          image: require("../../../assets/images/channai/price_11.jpg"),
+          image: require("../../../assets/images/chennai/price_11.jpg"),
         },
         {
           id: 12,
-          image: require("../../../assets/images/channai/price_12.jpg"),
+          image: require("../../../assets/images/chennai/price_12.jpg"),
         },
         {
           id: 13,
-          image: require("../../../assets/images/channai/price_13.jpg"),
+          image: require("../../../assets/images/chennai/price_13.jpg"),
         }
       ],
       lstPriceTamilnadu: [
         {
           id: 1,
-          image: require("../../../assets/images/tamilnadu/price_1.jpg"),
+          image: require("../../../assets/images/tamil/price_1.jpg"),
         },
         {
           id: 2,
-          image: require("../../../assets/images/tamilnadu/price_2.jpg"),
+          image: require("../../../assets/images/tamil/price_2.jpg"),
         },
         {
           id: 3,
-          image: require("../../../assets/images/tamilnadu/price_3.jpg"),
+          image: require("../../../assets/images/tamil/price_3.jpg"),
         },
         {
           id: 4,
-          image: require("../../../assets/images/tamilnadu/price_4.jpg"),
+          image: require("../../../assets/images/tamil/price_4.jpg"),
         },
         {
           id: 5,
-          image: require("../../../assets/images/tamilnadu/price_5.jpg"),
+          image: require("../../../assets/images/tamil/price_5.jpg"),
         },
         {
           id: 6,
-          image: require("../../../assets/images/tamilnadu/price_6.jpg"),
+          image: require("../../../assets/images/tamil/price_6.jpg"),
         },
         {
           id: 7,
-          image: require("../../../assets/images/tamilnadu/price_7.jpg"),
+          image: require("../../../assets/images/tamil/price_7.jpg"),
         },
         {
           id: 8,
-          image: require("../../../assets/images/tamilnadu/price_8.jpg"),
+          image: require("../../../assets/images/tamil/price_8.jpg"),
         },
         {
           id: 9,
-          image: require("../../../assets/images/tamilnadu/price_9.jpg"),
+          image: require("../../../assets/images/tamil/price_9.jpg"),
         },
         {
           id: 10,
-          image: require("../../../assets/images/tamilnadu/price_10.jpg"),
+          image: require("../../../assets/images/tamil/price_10.jpg"),
         },
         {
           id: 11,
-          image: require("../../../assets/images/tamilnadu/price_11.jpg"),
+          image: require("../../../assets/images/tamil/price_11.jpg"),
         },
         {
           id: 12,
-          image: require("../../../assets/images/tamilnadu/price_12.jpg"),
+          image: require("../../../assets/images/tamil/price_12.jpg"),
         },
         {
           id: 13,
-          image: require("../../../assets/images/tamilnadu/price_13.jpg"),
+          image: require("../../../assets/images/tamil/price_13.jpg"),
         }
       ]
     }
