@@ -30,12 +30,12 @@ class Home extends Component{
     getAppstoreAppVersion("com.JainPlywoods.android") //put any apps packageId here
     .then(appVersion => {
       console.log(3232, appVersion);
-      if(DeviceInfo.getVersion() !== appVersion){
+      if(DeviceInfo.getVersion() === appVersion){
         Alert.alert(
           'Alert',
           'Please update your application from Google Play Store',
           [
-            {text: 'Cancel',onPress: () => console.log('Cancel Pressed'), style: 'cancel',},
+            {text: 'Cancel',onPress: () => this.props.navigation.goBack(null), style: 'cancel',},
             {text: 'Update', onPress: () => Linking.openURL("market://details?id=com.JainPlywoods.android")},
           ],
           {cancelable: false},
@@ -55,10 +55,9 @@ class Home extends Component{
           'Alert',
           'Please update your application from Apple Store',
           [
-            {text: 'Cancel',onPress: () => console.log('Cancel Pressed'), style: 'cancel',},
             {text: 'Update', onPress: () => console.log('OK Pressed')},
           ],
-          {cancelable: false},
+          
         );
       }
     })
